@@ -9,7 +9,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Display characters in the list
         characters.forEach(character => {
             const characterItem = document.createElement('div');
-            characterItem.textContent = `Name: ${character.name}, Age: ${character.age}, Gender: ${character.gender}, Species: ${character.species}`;
+            characterItem.classList.add('character-item');
+            characterItem.textContent = `Name: ${character.name},
+                                        Age: ${character.age},
+                                        Gender: ${character.gender},
+                                        Species: ${character.species},
+                                        Eyes: ${character.eyes},
+                                        Hair: ${character.hair},
+                                        Skin: ${character.skin},
+                                        Height: ${character.height},
+                                        Other: ${character.other},
+                                        Personality: ${character.personality},
+                                        Traits: ${character.traits},
+                                        Background: ${character.background},
+                                        Occupation: ${character.occupation},
+                                        Hobbies: ${character.hobbies},
+                                        Goals: ${character.goals},
+                                        Fears: ${character.fears},
+                                        Religion: ${character.religion},
+                                        Flaws: ${character.flaws}`;
             charactersList.appendChild(characterItem);
         });
     } catch (error) {

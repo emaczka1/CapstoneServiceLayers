@@ -32,6 +32,16 @@ document.getElementById('registrationForm').addEventListener('submit', async (ev
       console.log('Response Data:');
 
 
+      // Check if the registration was successful based on the server response
+      if (response.ok) {
+        // Redirect the user to the home page
+        window.location.href = '/Login.html';
+    } else {
+        // Handle registration failure
+        console.log('Registration failed:', data.error);
+    }
+
+
     } catch (error) {
       console.error('Error registering user', error);
     }
